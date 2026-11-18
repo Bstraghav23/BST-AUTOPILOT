@@ -1,0 +1,30 @@
+name: Price alerts
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency: autopilot
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check listings and send alerts
+        env:
+          GAMEBOOST_API_KEY: ${{ secrets.GAMEBOOST_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python autopilot.py
+      - name: Save memory of what was already alerted
+        run: |
+          git config user.name "bst-autopilot"
+          git config user.email "bst-autopilot@users.noreply.github.com"
+          git add data/state.json
+          git diff --cached --quiet || git commit -m "Update alert state"
+          git push
