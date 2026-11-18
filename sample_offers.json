@@ -1,0 +1,52 @@
+[
+ {
+  "_kind": "account",
+  "id": 101,
+  "external_id": "",
+  "title": "CR Lvl 64 | 191 Emotes",
+  "price": "45.99",
+  "status": "listed",
+  "views": 38,
+  "listed_at": "2026-11-13T18:09:29.108820+00:00"
+ },
+ {
+  "_kind": "account",
+  "id": 102,
+  "external_id": "",
+  "title": "KT16 | 20 Evo | 3,093 Gems",
+  "price": "36.49",
+  "status": "listed",
+  "views": 12,
+  "listed_at": "2026-11-08T18:09:29.108820+00:00"
+ },
+ {
+  "_kind": "account",
+  "id": 103,
+  "external_id": "",
+  "title": "TH15 Max Heroes",
+  "price": "29.99",
+  "status": "listed",
+  "views": 5,
+  "listed_at": "2026-11-16T18:09:29.108820+00:00"
+ },
+ {
+  "_kind": "account",
+  "id": 104,
+  "external_id": "",
+  "title": "TH14 Near Max",
+  "price": {
+   "amount": "19.99"
+  },
+  "status": "sold",
+  "listed_at": "2026-11-15T18:09:29.108820+00:00"
+ },
+ {
+  "_kind": "item",
+  "id": 201,
+  "external_id": "CF-001",
+  "title": "CoC 5M Gold Farming",
+  "price": "0.99",
+  "status": "listed",
+  "listed_at": "2026-11-11T18:09:29.108820+00:00"
+ }
+]
