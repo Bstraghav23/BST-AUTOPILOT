@@ -1,0 +1,17 @@
+{
+  "watch": {
+    "/account-offers": "account",
+    "/item-offers": "item"
+  },
+  "rules": {
+    "reprice_kinds": [
+      "account"
+    ],
+    "drop_after_days": 3,
+    "drop_percent": 8,
+    "days_between_suggestions": 3,
+    "default_floor_percent": 70
+  },
+  "daily_summary_hour_ist": 21,
+  "currency_symbol": "\u20ac"
+}
